@@ -76,6 +76,7 @@ Resources:
   Ec2InstanceRole:
     Type: AWS::IAM::Role
     Properties:
+      RoleName: ChameleonInstance
       Tags:
         - Key: "Name"
           Value: "ChameleonInstance"
