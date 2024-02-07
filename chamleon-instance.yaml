@@ -50,12 +50,12 @@ Resources:
           - Ref: "AWS::Region"
           - "AMI"
       IamInstanceProfile: !Ref Ec2InstanceProfile
-      UserData:
-        Fn::Base64:
-          !Sub |
-          #!/bin/bash
-          yum update -y
-          yum install -y httpd-tools
+      # UserData:
+      #   Fn::Base64:
+      #     !Sub |
+      #     #!/bin/bash
+      #     yum update -y
+      #     yum install -y httpd-tools
       NetworkInterfaces:
         - AssociatePublicIpAddress: "true"
           DeviceIndex: "0"
